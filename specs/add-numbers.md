@@ -1,6 +1,6 @@
 # Spec: Add two numbers
 
-Status: Draft (v0.1)
+Status: Draft (v0.2)
 Owner: Business Analyst
 
 ## Summary
@@ -63,10 +63,11 @@ Feature: Add two numbers
 - **NFR-2:** A health endpoint so the cloud platform can check the service is up.
 - **NFR-3:** Runs within the cloud provider's free tier at expected demo traffic.
 
-## Open questions (BA to resolve with the user)
-1. Should decimals be supported (AC-7 currently rejects them)?
-2. Is 64-bit signed integer range (±9.2 quintillion) acceptable, or is arbitrary size needed?
-3. Who are the clients: public internet or internal only? Is authentication needed?
+## Decisions (resolved open questions)
+1. Whole numbers only; decimals are rejected (AC-7).
+2. 64-bit signed integer range is sufficient; no arbitrary size.
+3. Clients are the public internet; no authentication.
 
 ## Change log
 - v0.1 (2026-11-22): initial draft.
+- v0.2 (2026-11-22): resolved open questions (whole numbers, 64-bit range, public, no auth).
